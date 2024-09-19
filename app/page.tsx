@@ -18,7 +18,7 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3')" }}>
+        <div className="relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4"><span>Summer Music Festival</span></h1>
             <div className="space-x-4">
@@ -39,6 +39,7 @@ export default function LandingPage() {
         <div className="flex overflow-x-auto space-x-4 pb-4">
           {[1, 2, 3, 4, 5].map((event) => (
             <Card key={event} className="w-72 flex-shrink-0">
+              
               <CardHeader>
                 <img
                   src={`/placeholder.svg?height=150&width=280&text=Event+${event}`}
@@ -53,6 +54,7 @@ export default function LandingPage() {
                   dolore magna aliqua.
                 </p>
               </CardContent>
+          
               <CardFooter>
                 <Button variant="outline" className="w-full hover:bg-black hover:text-white">
                   <Bell className="mr-2 h-4 w-4" /> Add Reminder
