@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
@@ -11,23 +10,23 @@ export default function LandingPage() {
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-screen">
-        <img
+        {/* <img
           src="/placeholder.svg?height=1080&width=1920"
           alt="Featured Event"
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        /> */}
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex items-center justify-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3')" }}>
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Summer Music Festival</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4"><span>Summer Music Festival</span></h1>
             <div className="space-x-4">
-              <Button size="lg">
-                <Info className="mr-2 h-4 w-4" /> More Information
+              <Button size="lg" className=" bg-black hover:bg-white/20 ">
+                <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">More Information</span> 
               </Button>
-              <Button size="lg" variant="secondary">
-                Participate
+              <Button size="lg" className=" bg-black hover:bg-white/20" variant="secondary">
+               <span className="text-white">Participate</span> 
               </Button>
             </div>
           </div>
@@ -38,7 +37,7 @@ export default function LandingPage() {
       <section className="py-12 px-4">
         <h2 className="text-3xl font-bold text-center mb-8">Upcoming Events</h2>
         <div className="flex overflow-x-auto space-x-4 pb-4">
-          {[1, 2, 3, 4].map((event) => (
+          {[1, 2, 3, 4, 5].map((event) => (
             <Card key={event} className="w-72 flex-shrink-0">
               <CardHeader>
                 <img
@@ -55,7 +54,7 @@ export default function LandingPage() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full hover:bg-black hover:text-white">
                   <Bell className="mr-2 h-4 w-4" /> Add Reminder
                 </Button>
               </CardFooter>
