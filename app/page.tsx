@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
+import Link from "next/link"
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Semi-transparent Sticky Navbar */}
+    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-screen">
@@ -25,8 +25,8 @@ export default function LandingPage() {
               <Button size="lg" className=" bg-black hover:bg-white/20 ">
                 <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">More Information</span> 
               </Button>
-              <Button size="lg" className=" bg-black hover:bg-white/20" variant="secondary">
-               <span className="text-white">Participate</span> 
+              <Button size="lg" className=" bg-black hover:bg-white/20 ">
+                <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">Participate</span> 
               </Button>
             </div>
           </div>
@@ -56,9 +56,11 @@ export default function LandingPage() {
               </CardContent>
           
               <CardFooter>
-                <Button variant="outline" className="w-full hover:bg-black hover:text-white">
-                  <Bell className="mr-2 h-4 w-4" /> Add Reminder
-                </Button>
+                <Link href= '/eventCard'>
+                <Button  variant="outline" className="w-full hover:bg-black hover:text-white">
+                <Bell className="mr-2 h-6 w-4 " /> Add Reminder 
+              </Button>
+              </Link>
               </CardFooter>
             </Card>
           ))}
