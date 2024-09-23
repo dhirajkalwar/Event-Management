@@ -7,7 +7,7 @@ import { Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 
 export default function ForgotPasswordPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}>
+    <div className="min-h-screen flex flex-col bg-cover bg-center"  style={{backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3')" }}>
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Navbar */}

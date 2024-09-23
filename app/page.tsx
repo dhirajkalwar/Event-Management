@@ -3,8 +3,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Link from "next/link"
+import img1 from "../app/img/Em1.jpg"
 
 export default function LandingPage() {
+  
   return (
     <div className="min-h-screen flex flex-col bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       <Navbar />
@@ -34,12 +36,12 @@ export default function LandingPage() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-white">
         <h2 className="text-3xl font-bold text-center mb-8">Upcoming Events</h2>
         <div className="flex overflow-x-auto space-x-4 pb-4">
           {[1, 2, 3, 4, 5].map((event) => (
             <Card key={event} className="w-72 flex-shrink-0">
-              
+              <Link href= '/eventCard'>
               <CardHeader>
                 <img
                   src={`/placeholder.svg?height=150&width=280&text=Event+${event}`}
@@ -56,12 +58,12 @@ export default function LandingPage() {
               </CardContent>
           
               <CardFooter>
-                <Link href= '/eventCard'>
+                
                 <Button  variant="outline" className="w-full hover:bg-black hover:text-white">
                 <Bell className="mr-2 h-6 w-4 " /> Add Reminder 
               </Button>
-              </Link>
               </CardFooter>
+              </Link>
             </Card>
           ))}
         </div>
