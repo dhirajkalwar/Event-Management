@@ -16,7 +16,7 @@ export default function EventPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+    <div className="min-h-screen flex flex-col bg-cover bg-center cursor-default" style={{backgroundImage: "url('https://images.unsplash.com/photo-1573152958734-1922c188fba3?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Navbar */}
@@ -25,11 +25,11 @@ export default function EventPage() {
       {/* Event Content */}
       <div className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-12">
         <Card className="w-full max-w-4xl bg-white/10 backdrop-blur-md border-none overflow-hidden">
-          <Image
-            src={event.imageUrl}
+          <img
+            src={"https://plus.unsplash.com/premium_photo-1661315459644-18297c559777?q=80&w=1700&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
             alt={event.title}
-            width={800}
-            height={400}
+            width="100%"
+            height="100%"
             className="w-full h-64 object-cover"
           />
           <CardContent className="p-6">
@@ -49,7 +49,7 @@ export default function EventPage() {
               </div>
             </div>
             <p className="text-white/80 text-lg mb-6">{event.description}</p>
-            <Button className="w-full sm:w-auto">Register Now</Button>
+            <Link href="/"><Button className="w-full sm:w-auto">Register Now</Button></Link>
           </CardContent>
         </Card>
       </div>

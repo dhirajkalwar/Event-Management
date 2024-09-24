@@ -14,7 +14,7 @@ export default function LoginPage() {
       <nav className="relative z-20 flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm">
         <div className="flex items-center space-x-4">
           <Calendar className="h-6 w-6 text-white" />
-          <span className="text-lg font-bold text-white">EventPro</span>
+          <span className="text-lg font-bold text-white ">EventPro</span>
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
@@ -52,7 +52,7 @@ export default function LoginPage() {
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 py-12">
         <Card className="w-full max-w-md bg-white/10 backdrop-blur-md border-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center text-white">Login to EventPro</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-white cursor-default">Login to EventPro</CardTitle>
           </CardHeader>
           <CardContent>
             <form>
@@ -77,7 +77,7 @@ export default function LoginPage() {
             </div>
             <div className="w-full border-t border-white/20 my-2"></div>
             <div className="text-sm text-center">
-              <span className="text-white">Don't have an account? </span>
+              <span className="text-white cursor-default">Don't have an account? </span>
               <Link href="/createAccount" className="text-violet-400 hover:underline font-semibold">
                 Create a new account
               </Link>

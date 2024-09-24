@@ -33,7 +33,7 @@ export default function CalendarPage() {
 
       {/* Calendar Content */}
       <div className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-12">
-        <h1 className="text-4xl font-bold text-white mb-8">Event Calendar</h1>
+        <h1 className="text-4xl font-bold text-white mb-8 cursor-default">Event Calendar</h1>
         <div className="w-full max-w-4xl flex flex-col md:flex-row gap-8">
           <Card className="flex-grow bg-white/10 backdrop-blur-md border-none">
             <CardContent className="p-4">
@@ -45,7 +45,7 @@ export default function CalendarPage() {
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
-                <div className="text-white text-lg font-semibold w-32 text-center">
+                <div className="text-white text-lg font-semibold w-32 text-center cursor-default">
                   {date?.toLocaleString('default', { month: 'long', year: 'numeric' })}
                 </div>
                 <Button
@@ -60,7 +60,7 @@ export default function CalendarPage() {
                 mode="single"
                 selected={date}
                 onSelect={setDate}
-                className="rounded-md border-none text-white"
+                className="rounded-md border-none text-white cursor-default"
                 classNames={{
                   months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
                   month: "space-y-4",
@@ -90,10 +90,11 @@ export default function CalendarPage() {
             </CardContent>
           </Card>
           <Card className="flex-grow bg-white/10 backdrop-blur-md border-none">
-            <CardContent className="p-4">
+            <CardContent className="p-4 cursor-default">
               <h2 className="text-2xl font-semibold text-white mb-4">
                 {date ? date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Select a date'}
               </h2>
+                <Button>
               <div className="h-[300px] overflow-y-auto">
                 {selectedDateEvents.length > 0 ? (
                   <ul className="space-y-4">
@@ -108,6 +109,7 @@ export default function CalendarPage() {
                   <p className="text-white">No events scheduled for this date.</p>
                 )}
               </div>
+              </Button>
             </CardContent>
           </Card>
         </div>

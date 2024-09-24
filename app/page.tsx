@@ -3,12 +3,12 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Link from "next/link"
-import img1 from "../app/img/Em1.jpg"
+import img from "../app/img/Em1.jpg"
 
 export default function LandingPage() {
   
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
+    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1442504028989-ab58b5f29a4a?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       <Navbar />
       {/* Hero Section */}
       <section className="relative h-screen">
@@ -20,16 +20,15 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex items-center justify-center cursor-default">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4"><span>Summer Music Festival</span></h1>
             <div className="space-x-4">
+            <Link href='/moreInfo'>
               <Button size="lg" className=" bg-black hover:bg-white/20 ">
                 <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">More Information</span> 
               </Button>
-              <Button size="lg" className=" bg-black hover:bg-white/20 ">
-                <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">Participate</span> 
-              </Button>
+            </Link>
             </div>
           </div>
         </div>
@@ -37,16 +36,17 @@ export default function LandingPage() {
 
       {/* Upcoming Events Section */}
       <section className="py-12 px-4 bg-white">
-        <h2 className="text-3xl font-bold text-center mb-8">Upcoming Events</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 cursor-default">Upcoming Events</h2>
         <div className="flex overflow-x-auto space-x-4 pb-4">
           {[1, 2, 3, 4, 5].map((event) => (
             <Card key={event} className="w-72 flex-shrink-0">
               <Link href= '/eventCard'>
               <CardHeader>
                 <img
-                  src={`/placeholder.svg?height=150&width=280&text=Event+${event}`}
+                  src={"https://images.unsplash.com/photo-1619973226698-b77a5b5dd14b?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
                   alt={`Event ${event}`}
-                  className="w-full h-40 object-cover rounded-t-lg"
+                  width="100%"
+                  height="100%"
                 />
               </CardHeader>
               <CardContent>
