@@ -7,7 +7,7 @@ export default function navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm">
         <div className="flex items-center space-x-4">
           <Calendar className="h-6 w-6 text-white" />
-          <span className="text-lg font-bold text-white">EventPro</span>
+          <span className="text-lg font-bold text-white cursor-default">EventPro</span>
         </div>
         <div className="hidden md:flex items-center space-x-4">
           <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>

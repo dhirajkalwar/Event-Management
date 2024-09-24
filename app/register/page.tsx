@@ -9,57 +9,23 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
+import Navbar from "@/components/ui/Navbar"
 
 export default function RegisterPage() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}>
+    <div className="min-h-screen flex flex-col bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486591978090-58e619d37fe7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}>
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Navbar */}
-      <nav className="relative z-20 flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm">
-        <div className="flex items-center space-x-4">
-          <Calendar className="h-6 w-6 text-white" />
-          <span className="text-lg font-bold text-white">EventPro</span>
-        </div>
-        <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/">
-              <Home className="mr-2 h-4 w-4" /> Home
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/calendar">
-              <Calendar className="mr-2 h-4 w-4" /> Calendar
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/about">
-              <Info className="mr-2 h-4 w-4" /> About
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/contact">
-              <User className="mr-2 h-4 w-4" /> Contact
-            </Link>
-          </Button>
-          <Button variant="outline" size="sm" className="text-white border-white hover:bg-white hover:text-black" asChild>
-            <Link href="/login">
-              <LogIn className="mr-2 h-4 w-4" /> Login
-            </Link>
-          </Button>
-        </div>
-        <Button variant="ghost" size="icon" className="md:hidden text-white">
-          <Menu className="h-6 w-6" />
-        </Button>
-      </nav>
+      <Navbar/>
 
       {/* Registration Form */}
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 py-12">
         <Card className="w-full max-w-md bg-white/10 backdrop-blur-md border-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center text-white">Register for Future Tech Expo 2024</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-white cursor-default">Register for Future Tech Expo 2024</CardTitle>
           </CardHeader>
           <CardContent>
             <form>
@@ -82,14 +48,14 @@ export default function RegisterPage() {
                     <SelectTrigger className="bg-white/20 border-white/30 text-white">
                       <SelectValue placeholder="Select ticket type" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="text-white bg-black/60">
                       <SelectItem value="standard">Standard</SelectItem>
                       <SelectItem value="vip">VIP</SelectItem>
                       <SelectItem value="group">Group (5+ people)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 text-white">
                   <Checkbox id="terms" checked={agreed} onCheckedChange={setAgreed} />
                   <label
                     htmlFor="terms"
@@ -102,7 +68,7 @@ export default function RegisterPage() {
             </form>
           </CardContent>
           <CardFooter>
-            <Button className="w-full" type="submit" disabled={!agreed}>Register</Button>
+            <Button className="w-full text-white  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" type="submit" disabled={!agreed}>Register</Button>
           </CardFooter>
         </Card>
       </div>

@@ -3,7 +3,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Link from "next/link"
-import img from "../app/img/Em1.jpg"
 
 export default function LandingPage() {
   

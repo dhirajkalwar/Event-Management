@@ -49,7 +49,7 @@ export default function EventPage() {
               </div>
             </div>
             <p className="text-white/80 text-lg mb-6">{event.description}</p>
-            <Link href="/"><Button className="w-full sm:w-auto">Register Now</Button></Link>
+            <Link href="/"><Button className="w-full sm:w-auto text-white">Register Now</Button></Link>
           </CardContent>
         </Card>
       </div>

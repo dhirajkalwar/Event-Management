@@ -18,7 +18,7 @@ export default function CreateAccountPage() {
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 py-12">
         <Card className="w-full max-w-md bg-white/10 backdrop-blur-md border-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center text-white">Create Account</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-white cursor-default">Create Account</CardTitle>
           </CardHeader>
           <CardContent>
             <form>
@@ -39,10 +39,10 @@ export default function CreateAccountPage() {
             </form>
           </CardContent>
           <CardFooter className="flex flex-col space-y-4">
-            <Link href="/"><Button className="w-full" type="submit">Create Account</Button></Link>
+            <Link href="/"><Button className="w-full text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" type="submit">Create Account</Button></Link>
             <div className="text-sm text-center">
-              <span className="text-white">Already have an account? </span>
-              <Link href="/login" className="text-white hover:underline font-semibold">
+              <span className="text-white cursor-default">Already have an account? </span>
+              <Link href="/login" className="text-violet-400 hover:underline font-semibold">
                 Log in
               </Link>
             </div>

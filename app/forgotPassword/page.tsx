@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
+import Navbar from "@/components/ui/Navbar"
 
 export default function ForgotPasswordPage() {
   return (
@@ -11,48 +12,13 @@ export default function ForgotPasswordPage() {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Navbar */}
-      <nav className="relative z-20 flex items-center justify-between p-4 bg-black/30 backdrop-blur-sm">
-        <div className="flex items-center space-x-4">
-          <Calendar className="h-6 w-6 text-white" />
-          <span className="text-lg font-bold text-white">EventPro</span>
-        </div>
-        <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/">
-              <Home className="mr-2 h-4 w-4" /> Home
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/calendar">
-              <Calendar className="mr-2 h-4 w-4" /> Calendar
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/about">
-              <Info className="mr-2 h-4 w-4" /> About
-            </Link>
-          </Button>
-          <Button variant="ghost" size="sm" className="text-white hover:bg-white/20" asChild>
-            <Link href="/contact">
-              <User className="mr-2 h-4 w-4" /> Contact
-            </Link>
-          </Button>
-          <Button variant="outline" size="sm" className="text-white border-white hover:bg-white hover:text-black" asChild>
-            <Link href="/login">
-              <LogIn className="mr-2 h-4 w-4" /> Login
-            </Link>
-          </Button>
-        </div>
-        <Button variant="ghost" size="icon" className="md:hidden text-white">
-          <Menu className="h-6 w-6" />
-        </Button>
-      </nav>
+      <Navbar/>
 
       {/* Forgot Password Form */}
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 py-12">
         <Card className="w-full max-w-md bg-white/10 backdrop-blur-md border-none">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-center text-white">Reset Password</CardTitle>
+            <CardTitle className="text-2xl font-bold text-center text-white cursor-default">Reset Password</CardTitle>
           </CardHeader>
           <CardContent>
             <form>
@@ -73,7 +39,7 @@ export default function ForgotPasswordPage() {
             </form>
           </CardContent>
           <CardFooter className="flex flex-col items-center space-y-4">
-            <Link href="/login"><Button className="w-full" type="submit">Reset Password</Button></Link>
+            <Link href="/login"><Button className="w-full text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" type="submit">Reset Password</Button></Link>
             <div className="text-sm text-center">
             </div>
           </CardFooter>

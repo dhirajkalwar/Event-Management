@@ -32,7 +32,7 @@ export default function EventInfoPage() {
             height="100%"
             className="w-full h-64 object-cover"
           />
-          <CardContent className="p-6">
+          <CardContent className="p-6 cursor-default">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">{eventInfo.title}</h1>
             <div className="flex flex-wrap gap-4 mb-6">
               <div className="flex items-center text-white">
@@ -50,8 +50,8 @@ export default function EventInfoPage() {
             </div>
             <p className="text-white/80 text-lg mb-6">{eventInfo.description}</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="outline" className="flex-1  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Register Now</Button>
-              <Button variant="outline" className="flex-1  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Download Schedule</Button>
+              <Link href="/register"><Button variant="outline" className="flex-1 text-white  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Register Now</Button></Link>
+              <Button variant="outline" className="flex-1 text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Download Schedule</Button>
             </div>
           </CardContent>
         </Card>
