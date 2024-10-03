@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 
-export default function EventPage() {
+export default function EventPage() {     
   const event = {
     title: "Future Tech Expo 2024",
     description: "Join us for an exciting showcase of upcoming technological innovations. Experience hands-on demos, attend insightful talks from industry leaders, and network with tech enthusiasts from around the globe. From AI and robotics to sustainable energy solutions, discover the technologies that will shape our future.",
@@ -49,8 +49,11 @@ export default function EventPage() {
               </div>
             </div>
             <p className="text-white/80 text-lg mb-6">{event.description}</p>
-            <Link href="/"><Button className="w-full sm:w-auto text-white">Register Now</Button></Link>
-          </CardContent>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/register"><Button variant="outline" className="flex-1 text-white  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Register Now</Button></Link>
+              <Button variant="outline" className="flex-1 text-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Download Schedule</Button>
+            </div>
+            </CardContent>
         </Card>
       </div>
     </div>

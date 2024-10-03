@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Bell, Calendar, Home, Info, LogIn, Menu, User } from "lucide-react"
 import Navbar from "@/components/ui/Navbar"
 import Link from "next/link"
+import EventSection from "@/components/ui/EventSection"
 
 export default function LandingPage() {
   
@@ -24,7 +25,7 @@ export default function LandingPage() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4"><span>Summer Music Festival</span></h1>
             <div className="space-x-4">
             <Link href='/moreInfo'>
-              <Button size="lg" className=" bg-black hover:bg-white/20 ">
+              <Button size="lg" className=" bg-black hover:bg-white/20  rounded-full">
                 <Info className="mr-2 h-4 w-4 text-white" /><span className="text-white">More Information</span> 
               </Button>
             </Link>
@@ -34,39 +35,7 @@ export default function LandingPage() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-12 px-4 bg-white">
-        <h2 className="text-3xl font-bold text-center mb-8 cursor-default">Upcoming Events</h2>
-        <div className="flex overflow-x-auto space-x-4 pb-4">
-          {[1, 2, 3, 4, 5].map((event) => (
-            <Card key={event} className="w-72 flex-shrink-0">
-              <Link href= '/eventCard'>
-              <CardHeader>
-                <img
-                  src={"https://images.unsplash.com/photo-1619973226698-b77a5b5dd14b?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
-                  alt={`Event ${event}`}
-                  width="100%"
-                  height="100%"
-                />
-              </CardHeader>
-              <CardContent>
-                <CardTitle className="mb-2">Event {event}</CardTitle>
-                <p className="text-sm text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
-              </CardContent>
-          
-              <CardFooter>
-                
-                <Button  variant="outline" className="w-full hover:bg-black hover:text-white">
-                <Bell className="mr-2 h-6 w-4 " /> Add Reminder 
-              </Button>
-              </CardFooter>
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </section>
+      <EventSection />
     </div>
   )
 }
